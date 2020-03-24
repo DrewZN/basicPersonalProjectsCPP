@@ -96,6 +96,7 @@ void deleteUser(std::vector<std::string> &usernames, std::vector<std::string> &p
     for (int i = 0; i < usernames.size(); i++) {
         std::cout << i << "\t" << usernames[i] << "\n";
     }
+    std::cout << 999 << "\t" << "Exit\n";
     // Ask for which index to delete
     std::cout << "Which **number** of the username do you wish to delete? ";
     int toDelete;
@@ -106,6 +107,15 @@ void deleteUser(std::vector<std::string> &usernames, std::vector<std::string> &p
         std::cin.ignore(256, '\n');
         std::cout << "Which **number** of the username do you wish to delete? ";
         std::cin >> toDelete;
+    }
+    // If '999' (Exit)
+    if (toDelete == 999) {
+        return;
+    }
+    // Check if number is within either vector
+    if (toDelete + 1 > usernames.size() || toDelete < 0) {\
+        std::cerr << "Error: Invalid Number.\n";
+        return;
     }
     // Delete username **and** password from arrays according to index
     usernames.erase(usernames.begin() + toDelete);

@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b6390a8-221a-41a8-9d0b-85ff0ccae251" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basicLoginSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/basicLoginSystem.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1ZYfxKKFTll9qhgykoly7LVqwGD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -56,6 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585021776156</updated>
       <workItem from="1585021777401" duration="97000" />
+      <workItem from="1585023194698" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="basicLoginSystem - Changed source file name to project name">
       <created>1585021842915</created>
@@ -64,7 +67,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585021842915</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basicLoginSystem - Changed 'creating users' process to be a menu item. Not multiple at once anymore. Just one at a time. Also added 'delete user' option in main menu. Fixed bug where it doesn't actually create nor delete users by employing 'pass by reference' instead of 'pass by value'">
+      <created>1585023332371</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585023332371</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,16 +82,37 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basicLoginSystem - Changed source file name to project name" />
-    <option name="LAST_COMMIT_MESSAGE" value="basicLoginSystem - Changed source file name to project name" />
+    <MESSAGE value="basicLoginSystem - Changed 'creating users' process to be a menu item. Not multiple at once anymore. Just one at a time. Also added 'delete user' option in main menu. Fixed bug where it doesn't actually create nor delete users by employing 'pass by reference' instead of 'pass by value'" />
+    <option name="LAST_COMMIT_MESSAGE" value="basicLoginSystem - Changed 'creating users' process to be a menu item. Not multiple at once anymore. Just one at a time. Also added 'delete user' option in main menu. Fixed bug where it doesn't actually create nor delete users by employing 'pass by reference' instead of 'pass by value'" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="352" y="99" key="CommitChangelistDialog2" timestamp="1585021842558">
+    <state x="-278" y="162" key="CommitChangelistDialog2" timestamp="1585023932348">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="352" y="99" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1585021842558" />
-    <state x="479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1585021844242">
+    <state x="-278" y="162" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1585023932348" />
+    <state width="1866" height="265" key="GridCell.Tab.0.bottom" timestamp="1585023887756">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="479" y="243" key="Vcs.Push.Dialog.v2/0.36.1920.1044@0.36.1920.1044" timestamp="1585021844242" />
+    <state width="1866" height="265" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887756" />
+    <state width="1866" height="265" key="GridCell.Tab.0.center" timestamp="1585023887755">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1866" height="265" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887755" />
+    <state width="1866" height="265" key="GridCell.Tab.0.left" timestamp="1585023887754">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1866" height="265" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887754" />
+    <state width="1866" height="265" key="GridCell.Tab.0.right" timestamp="1585023887756">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state width="1866" height="265" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887756" />
+    <state x="479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1585023333795">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="479" y="243" key="Vcs.Push.Dialog.v2/0.36.1920.1044@0.36.1920.1044" timestamp="1585023333795" />
+    <state x="726" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585023415117">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="726" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.36.1920.1044@0.36.1920.1044" timestamp="1585023415117" />
   </component>
 </project>
