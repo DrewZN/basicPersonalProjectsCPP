@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/basicLoginSystem.cpp
+iostream
+-
+string
+-
+vector
+-
+

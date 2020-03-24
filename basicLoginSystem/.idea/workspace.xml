@@ -13,8 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b6390a8-221a-41a8-9d0b-85ff0ccae251" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basicLoginSystem.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/basicLoginSystem.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basicLoginSystem.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/basicLoginSystem.dir/depend.make" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585021776156</updated>
       <workItem from="1585021777401" duration="97000" />
-      <workItem from="1585023194698" duration="1436000" />
+      <workItem from="1585023194698" duration="1471000" />
     </task>
     <task id="LOCAL-00001" summary="basicLoginSystem - Changed source file name to project name">
       <created>1585021842915</created>
@@ -82,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585024003413</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="basicLoginSystem - Added (maybe 100% working version of) a save/load file system.">
+      <created>1585024984950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585024984950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,33 +97,34 @@
     <MESSAGE value="basicLoginSystem - Changed source file name to project name" />
     <MESSAGE value="basicLoginSystem - Changed 'creating users' process to be a menu item. Not multiple at once anymore. Just one at a time. Also added 'delete user' option in main menu. Fixed bug where it doesn't actually create nor delete users by employing 'pass by reference' instead of 'pass by value'" />
     <MESSAGE value="basicLoginSystem - Added 'Exit' option to 'Delete User' menu item. Added error checking in case the user number isn't within the range of the usernames/passwords vectors." />
-    <option name="LAST_COMMIT_MESSAGE" value="basicLoginSystem - Added 'Exit' option to 'Delete User' menu item. Added error checking in case the user number isn't within the range of the usernames/passwords vectors." />
+    <MESSAGE value="basicLoginSystem - Added (maybe 100% working version of) a save/load file system." />
+    <option name="LAST_COMMIT_MESSAGE" value="basicLoginSystem - Added (maybe 100% working version of) a save/load file system." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="92" key="CommitChangelistDialog2" timestamp="1585024003311">
+    <state x="0" y="92" key="CommitChangelistDialog2" timestamp="1585024984849">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="0" y="92" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1585024003311" />
-    <state width="1866" height="265" key="GridCell.Tab.0.bottom" timestamp="1585023887756">
+    <state x="0" y="92" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1585024984849" />
+    <state width="1866" height="265" key="GridCell.Tab.0.bottom" timestamp="1585024991414">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state width="1866" height="265" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887756" />
-    <state width="1866" height="265" key="GridCell.Tab.0.center" timestamp="1585023887755">
+    <state width="1866" height="265" key="GridCell.Tab.0.bottom/0.36.1920.1044@0.36.1920.1044" timestamp="1585024991414" />
+    <state width="1866" height="265" key="GridCell.Tab.0.center" timestamp="1585024991413">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state width="1866" height="265" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887755" />
-    <state width="1866" height="265" key="GridCell.Tab.0.left" timestamp="1585023887754">
+    <state width="1866" height="265" key="GridCell.Tab.0.center/0.36.1920.1044@0.36.1920.1044" timestamp="1585024991413" />
+    <state width="1866" height="265" key="GridCell.Tab.0.left" timestamp="1585024991412">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state width="1866" height="265" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887754" />
-    <state width="1866" height="265" key="GridCell.Tab.0.right" timestamp="1585023887756">
+    <state width="1866" height="265" key="GridCell.Tab.0.left/0.36.1920.1044@0.36.1920.1044" timestamp="1585024991412" />
+    <state width="1866" height="265" key="GridCell.Tab.0.right" timestamp="1585024991413">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state width="1866" height="265" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1585023887756" />
-    <state x="479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1585024004630">
+    <state width="1866" height="265" key="GridCell.Tab.0.right/0.36.1920.1044@0.36.1920.1044" timestamp="1585024991413" />
+    <state x="479" y="243" key="Vcs.Push.Dialog.v2" timestamp="1585024986416">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
-    <state x="479" y="243" key="Vcs.Push.Dialog.v2/0.36.1920.1044@0.36.1920.1044" timestamp="1585024004630" />
+    <state x="479" y="243" key="Vcs.Push.Dialog.v2/0.36.1920.1044@0.36.1920.1044" timestamp="1585024986416" />
     <state x="726" y="461" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585023415117">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
