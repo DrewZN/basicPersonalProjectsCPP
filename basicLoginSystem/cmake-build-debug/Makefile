@@ -123,32 +123,32 @@ basicLoginSystem/fast:
 	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/build
 .PHONY : basicLoginSystem/fast
 
-main.o: main.cpp.o
+basicLoginSystem.o: basicLoginSystem.cpp.o
 
-.PHONY : main.o
+.PHONY : basicLoginSystem.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/main.cpp.o
-.PHONY : main.cpp.o
+basicLoginSystem.cpp.o:
+	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o
+.PHONY : basicLoginSystem.cpp.o
 
-main.i: main.cpp.i
+basicLoginSystem.i: basicLoginSystem.cpp.i
 
-.PHONY : main.i
+.PHONY : basicLoginSystem.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/main.cpp.i
-.PHONY : main.cpp.i
+basicLoginSystem.cpp.i:
+	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.i
+.PHONY : basicLoginSystem.cpp.i
 
-main.s: main.cpp.s
+basicLoginSystem.s: basicLoginSystem.cpp.s
 
-.PHONY : main.s
+.PHONY : basicLoginSystem.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/main.cpp.s
-.PHONY : main.cpp.s
+basicLoginSystem.cpp.s:
+	$(MAKE) -f CMakeFiles/basicLoginSystem.dir/build.make CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.s
+.PHONY : basicLoginSystem.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... basicLoginSystem"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... basicLoginSystem.o"
+	@echo "... basicLoginSystem.i"
+	@echo "... basicLoginSystem.s"
 .PHONY : help
 
 

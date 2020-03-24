@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/basicLoginSystem.dir/main.cpp.o"
+  "CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o"
   "basicLoginSystem"
   "basicLoginSystem.pdb"
 )

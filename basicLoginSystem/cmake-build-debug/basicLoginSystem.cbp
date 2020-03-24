@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/main.cpp">
+		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/basicLoginSystem.cpp">
 			<Option target="basicLoginSystem"/>
 		</Unit>
 		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/CMakeLists.txt">

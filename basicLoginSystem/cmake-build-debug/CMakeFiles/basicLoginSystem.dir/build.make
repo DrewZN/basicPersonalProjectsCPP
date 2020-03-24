@@ -57,27 +57,27 @@ include CMakeFiles/basicLoginSystem.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/basicLoginSystem.dir/flags.make
 
-CMakeFiles/basicLoginSystem.dir/main.cpp.o: CMakeFiles/basicLoginSystem.dir/flags.make
-CMakeFiles/basicLoginSystem.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basicLoginSystem.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basicLoginSystem.dir/main.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/main.cpp
+CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o: CMakeFiles/basicLoginSystem.dir/flags.make
+CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o: ../basicLoginSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/basicLoginSystem.cpp
 
-CMakeFiles/basicLoginSystem.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basicLoginSystem.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/main.cpp > CMakeFiles/basicLoginSystem.dir/main.cpp.i
+CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/basicLoginSystem.cpp > CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.i
 
-CMakeFiles/basicLoginSystem.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basicLoginSystem.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/main.cpp -o CMakeFiles/basicLoginSystem.dir/main.cpp.s
+CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/basicLoginSystem.cpp -o CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.s
 
 # Object files for target basicLoginSystem
 basicLoginSystem_OBJECTS = \
-"CMakeFiles/basicLoginSystem.dir/main.cpp.o"
+"CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o"
 
 # External object files for target basicLoginSystem
 basicLoginSystem_EXTERNAL_OBJECTS =
 
-basicLoginSystem: CMakeFiles/basicLoginSystem.dir/main.cpp.o
+basicLoginSystem: CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o
 basicLoginSystem: CMakeFiles/basicLoginSystem.dir/build.make
 basicLoginSystem: CMakeFiles/basicLoginSystem.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicLoginSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable basicLoginSystem"

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/basicLoginSystem.dir/main.cpp.o  -o basicLoginSystem 
+/usr/bin/c++  -g   CMakeFiles/basicLoginSystem.dir/basicLoginSystem.cpp.o  -o basicLoginSystem 
