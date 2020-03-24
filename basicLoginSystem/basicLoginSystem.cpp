@@ -1,11 +1,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 void createUser(std::vector<std::string> &, std::vector<std::string> &);
 void deleteUser(std::vector<std::string> &, std::vector<std::string> &);
 void passwordPrompt(std::vector<std::string>, std::vector<std::string>);
 bool ifChecksOut(std::string, std::string, std::vector<std::string>, std::vector<std::string>);
+void readFromFile(std::vector<std::string> &, std::vector<std::string> &);
+void writeToFile(std::vector<std::string>, std::vector<std::string>);
 
 int main() {
     std::vector<std::string> userNames;
@@ -19,7 +22,9 @@ int main() {
                   << "1. Login\n"
                   << "2. Create user\n"
                   << "3. Delete user\n"
-                  << "4. Quit\n"
+                  << "4. Save to File\n"
+                  << "5. Read from File\n"
+                  << "6. Quit\n"
                   << "Option: ";
         int menuOp;
         std::cin >> menuOp;
@@ -32,7 +37,9 @@ int main() {
                       << "1. Login\n"
                       << "2. Create user\n"
                       << "3. Delete user\n"
-                      << "4. Quit\n"
+                      << "4. Save to File\n"
+                      << "5. Read from File\n"
+                      << "6. Quit\n"
                       << "Option: ";
             std::cin >> menuOp;
         }
@@ -61,6 +68,14 @@ int main() {
                 break;
             }
             case 4: {
+                writeToFile(userNames, passWords);
+                break;
+            }
+            case 5: {
+                readFromFile(userNames, passWords);
+                break;
+            }
+            case 6: {
                 quit = true;
                 std::cout << "Program is quitting.\n";
                 break;
@@ -168,4 +183,60 @@ bool ifChecksOut(std::string username, std::string password, std::vector<std::st
     }
 
     return ret;
+}
+
+void readFromFile(std::vector<std::string> &usernames, std::vector<std::string> &passwords) {
+    std::ifstream readFile;
+    std::string tempU, tempP;
+
+    readFile.open("userData.txt");
+
+    while (readFile >> tempU) {
+        usernames.push_back(tempU);
+    }
+
+    readFile.close();
+
+    readFile.open("passData.txt");
+
+    while (readFile >> tempP) {
+        passwords.push_back(tempP);
+    }
+
+    readFile.close();
+
+    if (usernames.size() == 0) {
+        std::cerr << "Error: No records detected from file.\n"
+                  << "Cannot load anything from file.\n";
+        return;
+    }
+    std::cout << usernames.size() << " record(s) loaded from file.\n";
+}
+
+void writeToFile(std::vector<std::string> usernames, std::vector<std::string> passwords) {
+    std::ofstream writeFile;
+    writeFile.open("userData.txt");
+
+    for (int i = 0; i < usernames.size(); i++) {
+        writeFile << usernames[i] << "\n";
+    }
+
+    writeFile.close();
+
+    writeFile.open("passData.txt");
+
+    for (int i = 0; i < passwords.size(); i++) {
+        writeFile << passwords[i] << "\n";
+    }
+
+    writeFile.close();
+
+    if (usernames.size() == 0) {
+        std::cerr << "Error: No records detected.\n"
+                  << "Cannot save to file.\n";
+        return;
+    }
+    else {
+        std::cout << usernames.size() << " record(s) stored to file.\n";
+    }
 }
