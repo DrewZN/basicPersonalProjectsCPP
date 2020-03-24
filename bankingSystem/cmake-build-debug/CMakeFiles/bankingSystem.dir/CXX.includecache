@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/drewzn/Stuff/Programming/C++/Projects/Personal/bankingSystem/main.cpp
+iostream
+-
+iomanip
+-
+string
+-
+fstream
+-
+vector
+-
+
