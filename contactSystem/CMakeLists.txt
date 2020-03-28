@@ -3,4 +3,4 @@ project(contactSystem)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(contactSystem main.cpp)
+add_executable(contactSystem contactSystem.cpp)
