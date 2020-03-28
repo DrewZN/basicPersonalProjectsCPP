@@ -320,7 +320,7 @@ void editContact(std::vector<Contact> &contacts) {
     }
     // Search for contact
     for (int i = 0; i < contacts.size(); i++) {
-        std::cout << i << " " << contacts[i].getName() << std::endl;
+        std::cout << i+1 << "\t" << contacts[i].getName() << std::endl;
     }
     std::cout << -1 << " " << "Exit\n";
     std::cout << "Select Contact [Index] to Edit: ";
@@ -335,8 +335,8 @@ void editContact(std::vector<Contact> &contacts) {
         std::cin >> contactIndex;
     }
     // Check if number is outside range
-    if (contactIndex > contacts.size() || contactIndex < -1) {
-        std::cerr << "Error: Index requested **not** in range of contacts.\n";
+    if (contactIndex > contacts.size() || contactIndex <= 0) {
+        std::cerr << "Error: Index requested not in range of contacts.\n";
         return;
     }
     bool quit = false;
@@ -422,7 +422,7 @@ void deleteContact(std::vector<Contact> &contacts) {
     }
     // Search for contact
     for (int i = 0; i < contacts.size(); i++) {
-        std::cout << i << " " << contacts[i].getName() << std::endl;
+        std::cout << i+1 << "\t" << contacts[i].getName() << std::endl;
     }
     std::cout << -1 << " " << "Exit\n";
     std::cout << "Select Contact [Index] to Delete: ";
@@ -437,12 +437,12 @@ void deleteContact(std::vector<Contact> &contacts) {
         std::cin >> contactIndex;
     }
     // Check if number is outside range
-    if (contactIndex > contacts.size() || contactIndex < -1) {
-        std::cerr << "\nError: Index requested **not** in range of contacts.\n";
+    if (contactIndex > contacts.size() || contactIndex <= 0) {
+        std::cerr << "\nError: Index requested not in range of contacts.\n";
         return;
     }
     // Delete
-    contacts.erase(contacts.begin() + contactIndex);
+    contacts.erase(contacts.begin() + (contactIndex-1));
     std::cout << "Contact deleted.\n";
 }
 
