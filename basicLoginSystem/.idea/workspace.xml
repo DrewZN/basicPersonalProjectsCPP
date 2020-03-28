@@ -12,6 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b6390a8-221a-41a8-9d0b-85ff0ccae251" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../contactSystem/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../contactSystem/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +61,7 @@
       <workItem from="1585021777401" duration="97000" />
       <workItem from="1585023194698" duration="1471000" />
       <workItem from="1585029117714" duration="615000" />
+      <workItem from="1585354231582" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="basicLoginSystem - Changed source file name to project name">
       <created>1585021842915</created>
@@ -106,6 +109,10 @@
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
     <state x="0" y="92" key="CommitChangelistDialog2/0.36.1920.1044@0.36.1920.1044" timestamp="1585024984849" />
+    <state x="1180" y="253" key="FileChooserDialogImpl" timestamp="1585354298060">
+      <screen x="0" y="36" width="1920" height="1044" />
+    </state>
+    <state x="1180" y="253" key="FileChooserDialogImpl/0.36.1920.1044@0.36.1920.1044" timestamp="1585354298060" />
     <state width="1866" height="265" key="GridCell.Tab.0.bottom" timestamp="1585024991414">
       <screen x="0" y="36" width="1920" height="1044" />
     </state>
