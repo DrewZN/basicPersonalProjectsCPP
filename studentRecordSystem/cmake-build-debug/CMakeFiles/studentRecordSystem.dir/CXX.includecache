@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/main.cpp
+iostream
+-
+string
+-
+vector
+-
+fstream
+-
+

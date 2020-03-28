@@ -57,27 +57,27 @@ include CMakeFiles/contactSystem.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/contactSystem.dir/flags.make
 
-CMakeFiles/contactSystem.dir/main.cpp.o: CMakeFiles/contactSystem.dir/flags.make
-CMakeFiles/contactSystem.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/contactSystem.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/contactSystem.dir/main.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/main.cpp
+CMakeFiles/contactSystem.dir/contactSystem.cpp.o: CMakeFiles/contactSystem.dir/flags.make
+CMakeFiles/contactSystem.dir/contactSystem.cpp.o: ../contactSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/contactSystem.dir/contactSystem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/contactSystem.dir/contactSystem.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/contactSystem.cpp
 
-CMakeFiles/contactSystem.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/contactSystem.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/main.cpp > CMakeFiles/contactSystem.dir/main.cpp.i
+CMakeFiles/contactSystem.dir/contactSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/contactSystem.dir/contactSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/contactSystem.cpp > CMakeFiles/contactSystem.dir/contactSystem.cpp.i
 
-CMakeFiles/contactSystem.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contactSystem.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/main.cpp -o CMakeFiles/contactSystem.dir/main.cpp.s
+CMakeFiles/contactSystem.dir/contactSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/contactSystem.dir/contactSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/contactSystem.cpp -o CMakeFiles/contactSystem.dir/contactSystem.cpp.s
 
 # Object files for target contactSystem
 contactSystem_OBJECTS = \
-"CMakeFiles/contactSystem.dir/main.cpp.o"
+"CMakeFiles/contactSystem.dir/contactSystem.cpp.o"
 
 # External object files for target contactSystem
 contactSystem_EXTERNAL_OBJECTS =
 
-contactSystem: CMakeFiles/contactSystem.dir/main.cpp.o
+contactSystem: CMakeFiles/contactSystem.dir/contactSystem.cpp.o
 contactSystem: CMakeFiles/contactSystem.dir/build.make
 contactSystem: CMakeFiles/contactSystem.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable contactSystem"

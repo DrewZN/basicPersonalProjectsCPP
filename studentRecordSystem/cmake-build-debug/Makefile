@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem
+CMAKE_SOURCE_DIR = /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug
+CMAKE_BINARY_DIR = /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/contactSystem/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named contactSystem
+# Target rules for targets named studentRecordSystem
 
 # Build rule for target.
-contactSystem: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 contactSystem
-.PHONY : contactSystem
+studentRecordSystem: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 studentRecordSystem
+.PHONY : studentRecordSystem
 
 # fast build rule for target.
-contactSystem/fast:
-	$(MAKE) -f CMakeFiles/contactSystem.dir/build.make CMakeFiles/contactSystem.dir/build
-.PHONY : contactSystem/fast
+studentRecordSystem/fast:
+	$(MAKE) -f CMakeFiles/studentRecordSystem.dir/build.make CMakeFiles/studentRecordSystem.dir/build
+.PHONY : studentRecordSystem/fast
 
-contactSystem.o: contactSystem.cpp.o
+main.o: main.cpp.o
 
-.PHONY : contactSystem.o
+.PHONY : main.o
 
 # target to build an object file
-contactSystem.cpp.o:
-	$(MAKE) -f CMakeFiles/contactSystem.dir/build.make CMakeFiles/contactSystem.dir/contactSystem.cpp.o
-.PHONY : contactSystem.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/studentRecordSystem.dir/build.make CMakeFiles/studentRecordSystem.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-contactSystem.i: contactSystem.cpp.i
+main.i: main.cpp.i
 
-.PHONY : contactSystem.i
+.PHONY : main.i
 
 # target to preprocess a source file
-contactSystem.cpp.i:
-	$(MAKE) -f CMakeFiles/contactSystem.dir/build.make CMakeFiles/contactSystem.dir/contactSystem.cpp.i
-.PHONY : contactSystem.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/studentRecordSystem.dir/build.make CMakeFiles/studentRecordSystem.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-contactSystem.s: contactSystem.cpp.s
+main.s: main.cpp.s
 
-.PHONY : contactSystem.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-contactSystem.cpp.s:
-	$(MAKE) -f CMakeFiles/contactSystem.dir/build.make CMakeFiles/contactSystem.dir/contactSystem.cpp.s
-.PHONY : contactSystem.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/studentRecordSystem.dir/build.make CMakeFiles/studentRecordSystem.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -157,11 +157,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... contactSystem"
+	@echo "... studentRecordSystem"
 	@echo "... edit_cache"
-	@echo "... contactSystem.o"
-	@echo "... contactSystem.i"
-	@echo "... contactSystem.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

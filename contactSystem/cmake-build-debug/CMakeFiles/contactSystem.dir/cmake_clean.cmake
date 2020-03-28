@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/contactSystem.dir/main.cpp.o"
+  "CMakeFiles/contactSystem.dir/contactSystem.cpp.o"
   "contactSystem"
   "contactSystem.pdb"
 )

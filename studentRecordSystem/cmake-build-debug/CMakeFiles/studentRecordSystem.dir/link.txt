@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/studentRecordSystem.dir/main.cpp.o  -o studentRecordSystem 
