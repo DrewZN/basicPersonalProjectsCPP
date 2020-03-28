@@ -3,4 +3,4 @@ project(studentRecordSystem)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(studentRecordSystem main.cpp)
+add_executable(studentRecordSystem studentRecordSystem.cpp)
