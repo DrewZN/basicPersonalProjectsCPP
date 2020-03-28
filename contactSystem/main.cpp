@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 // Class and Member Functions
 class Contact{
@@ -62,6 +63,8 @@ void editContact(std::vector<Contact> &);
 void deleteContact(std::vector<Contact> &);
 void searchContactName(const std::vector<Contact>);
 void searchContactNum(const std::vector<Contact>);
+void saveToFile(const std::vector<Contact>);
+void readFromFile(std::vector<Contact> &);
 
 int main() {
     std::vector<Contact> contacts;
@@ -90,6 +93,14 @@ int main() {
                 deleteContact(contacts);
                 break;
             }
+            case 6: {
+                saveToFile(contacts);
+                break;
+            }
+            case 7: {
+                readFromFile(contacts);
+                break;
+            }
             case 0: {
                 std::cerr << "Program is exiting.\n";
                 quit = true;
@@ -114,7 +125,9 @@ void mainMenu(int &menuOp) {
               << "[3] Search for contact\n"
               << "[4] Edit a contact\n"
               << "[5] Delete a contact\n"
-              << "[0] Exit\n"
+              << "[6] Save to File\n"
+              << "[7] Read from File\n"
+              << "[0] Exit Program\n"
               << "=====================\n"
               << "Enter choice: ";
     std::cin >> menuOp;
@@ -131,7 +144,9 @@ void mainMenu(int &menuOp) {
                   << "[3] Search for contact\n"
                   << "[4] Edit a contact\n"
                   << "[5] Delete a contact\n"
-                  << "[0] Exit\n"
+                  << "[6] Save to File\n"
+                  << "[7] Read from File\n"
+                  << "[0] Exit Program\n"
                   << "=====================\n"
                   << "Enter choice: ";
         std::cin >> menuOp;
@@ -191,7 +206,7 @@ void searchForContact(const std::vector<Contact> contacts) {
                      "===============\n"
                      "[1] Search using name\n"
                      "[2] Search using number\n"
-                     "[0] Exit\n"
+                     "[0] Exit to Main Menu\n"
                      "===============\n"
                      "Option: ";
         int searchMenuOp;
@@ -206,7 +221,7 @@ void searchForContact(const std::vector<Contact> contacts) {
                          "===============\n"
                          "[1] Search using name\n"
                          "[2] Search using number\n"
-                         "[0] Exit\n"
+                         "[0] Exit to Main Menu\n"
                          "===============\n"
                          "Option: ";
             std::cin >> searchMenuOp;
@@ -218,6 +233,11 @@ void searchForContact(const std::vector<Contact> contacts) {
             }
             case 2: {
                 searchContactNum(contacts);
+                break;
+            }
+            case 0: {
+                std::cout << "Exiting to Main Menu.\n";
+                quit = true;
                 break;
             }
             default: {
@@ -254,7 +274,8 @@ void searchContactName(const std::vector<Contact> contacts) {
         return;
     }
     // Display Contact Info
-    std::cout << "Contact found!\n"
+    std::cout << "===============\n"
+                 "Contact found!\n"
                  "===============\n";
     std::cout << contacts[indexFoundN].getName() << "\t" << contacts[indexFoundN].getPhoneNum() << "\t" << contacts[indexFoundN].getEmail() << "\t" << contacts[indexFoundN].getAddress() << std::endl;
 }
@@ -285,7 +306,8 @@ void searchContactNum(const std::vector<Contact> contacts) {
         return;
     }
     // Display Contact Info
-    std::cout << "Contact found!\n"
+    std::cout << "===============\n"
+                 "Contact found!\n"
                  "===============\n";
     std::cout << contacts[indexFoundP].getName() << "\t" << contacts[indexFoundP].getPhoneNum() << "\t" << contacts[indexFoundP].getEmail() << "\t" << contacts[indexFoundP].getAddress() << std::endl;
 }
@@ -300,6 +322,7 @@ void editContact(std::vector<Contact> &contacts) {
     for (int i = 0; i < contacts.size(); i++) {
         std::cout << i << " " << contacts[i].getName() << std::endl;
     }
+    std::cout << -1 << " " << "Exit\n";
     std::cout << "Select Contact [Index] to Edit: ";
     int contactIndex;
     std::cin >> contactIndex;
@@ -312,27 +335,83 @@ void editContact(std::vector<Contact> &contacts) {
         std::cin >> contactIndex;
     }
     // Check if number is outside range
-    if (contactIndex > contacts.size() || contactIndex < 0) {
+    if (contactIndex > contacts.size() || contactIndex < -1) {
         std::cerr << "Error: Index requested **not** in range of contacts.\n";
         return;
     }
-    // Edit
-    std::string tempName, tempNum, tempAddress, tempEmail;
-    std::cout << "Enter new name: ";
-    std::getline(std::cin >> std::ws, tempName);
-    std::cout << "Enter new phone number: ";
-    std::getline(std::cin >> std::ws, tempNum);
-    std::cout << "Enter new address: ";
-    std::getline(std::cin >> std::ws, tempAddress);
-    std::cout << "Enter new email: ";
-    std::getline(std::cin >> std::ws, tempEmail);
-    // Change specific contact
-    contacts[contactIndex].setName(tempName);
-    contacts[contactIndex].setPhoneNum(tempNum);
-    contacts[contactIndex].setAddress(tempAddress);
-    contacts[contactIndex].setEmail(tempEmail);
-
-    std::cout << "Contact edited.\n";
+    bool quit = false;
+    do {
+        // Display Individual Contact Info and Ask for Detail to Change
+        int detailToChange;
+        std::cout << "=====================================\n";
+        std::cout << "[1] Name: \t" << contacts[contactIndex].getName() << std::endl
+                  << "[2] Phone Number: \t" << contacts[contactIndex].getPhoneNum() << std::endl
+                  << "[3] Email: \t" << contacts[contactIndex].getEmail() << std::endl
+                  << "[4] Address: \t" << contacts[contactIndex].getAddress() << std::endl
+                  << "[0] Exit to Main Menu\n";
+        std::cout << "=====================================\n";
+        std::cout << "Which detail do you want to change? ";
+        std::cin >> detailToChange;
+        // Error checking for cin
+        if (std::cin.fail()) {
+            std::cerr << "Error: Invalid Input Detected.\n";
+            std::cin.clear();
+            std::cin.ignore(256, '\n');
+            std::cout << "=====================================\n";
+            std::cout << "[1] Name: \t" << contacts[contactIndex].getName() << std::endl
+                      << "[2] Phone Number: \t" << contacts[contactIndex].getPhoneNum() << std::endl
+                      << "[3] Email: \t" << contacts[contactIndex].getEmail() << std::endl
+                      << "[4] Address: \t" << contacts[contactIndex].getAddress() << std::endl
+                      << "[0] Exit to Main Menu\n";
+            std::cout << "=====================================\n";
+            std::cout << "Which detail do you want to change? ";
+            std::cin >> detailToChange;
+        }
+        // Switch Menu for Detail to Change
+        switch(detailToChange) {
+            case 1: {
+                std::string tempName;
+                std::cout << "Change name: ";
+                std::getline(std::cin >> std::ws, tempName);
+                contacts[contactIndex].setName(tempName);
+                std::cout << "Name changed.\n";
+                break;
+            }
+            case 2: {
+                std::string tempNum;
+                std::cout << "Change phone number: ";
+                std::getline(std::cin >> std::ws, tempNum);
+                contacts[contactIndex].setPhoneNum(tempNum);
+                std::cout << "Phone number changed.\n";
+                break;
+            }
+            case 3: {
+                std::string tempEmail;
+                std::cout << "Change email: ";
+                std::getline(std::cin >> std::ws, tempEmail);
+                contacts[contactIndex].setEmail(tempEmail);
+                std::cout << "Email changed.\n";
+                break;
+            }
+            case 4: {
+                std::string tempAddress;
+                std::cout << "Change address: ";
+                std::getline(std::cin >> std::ws, tempAddress);
+                contacts[contactIndex].setAddress(tempAddress);
+                std::cout << "Address changed.\n";
+                break;
+            }
+            case 0: {
+                quit = true;
+                break;
+            }
+            default: {
+                std::cerr << "Error: Unknown Input.\n";
+                break;
+            }
+        }
+    } while (quit == false);
+    std::cout << "Exiting to Main Menu.\n";
 }
 
 void deleteContact(std::vector<Contact> &contacts) {
@@ -345,23 +424,98 @@ void deleteContact(std::vector<Contact> &contacts) {
     for (int i = 0; i < contacts.size(); i++) {
         std::cout << i << " " << contacts[i].getName() << std::endl;
     }
+    std::cout << -1 << " " << "Exit\n";
     std::cout << "Select Contact [Index] to Delete: ";
     int contactIndex;
     std::cin >> contactIndex;
     // Error checking for cin
     if (std::cin.fail()) {
-        std::cerr << "Error: Invalid Input Detected.\n";
+        std::cerr << "\nError: Invalid Input Detected.\n";
         std::cin.clear();
         std::cin.ignore(256, '\n');
         std::cout << "Select Contact [Index] to Delete: ";
         std::cin >> contactIndex;
     }
     // Check if number is outside range
-    if (contactIndex > contacts.size() || contactIndex < 0) {
-        std::cerr << "Error: Index requested **not** in range of contacts.\n";
+    if (contactIndex > contacts.size() || contactIndex < -1) {
+        std::cerr << "\nError: Index requested **not** in range of contacts.\n";
         return;
     }
     // Delete
     contacts.erase(contacts.begin() + contactIndex);
     std::cout << "Contact deleted.\n";
 }
+
+void saveToFile(const std::vector<Contact> contacts) {
+    // If empty vector
+    if (contacts.size() == 0) {
+        std::cerr << "Erasing Data Files.\n";
+    }
+
+    // Open files to write to
+    std::ofstream writeNames, writeAddresses, writeNumbers, writeEmails;
+
+    writeNames.open("namesData.txt");
+    writeAddresses.open("addressData.txt");
+    writeNumbers.open("numbersData.txt");
+    writeEmails.open("emailsData.txt");
+
+    // Write to file
+    for (int i = 0; i < contacts.size(); i++) {
+        writeNames << contacts[i].getName() << std::endl;
+        writeNumbers << contacts[i].getPhoneNum() << std::endl;
+        writeEmails << contacts[i].getEmail() << std::endl;
+        writeAddresses << contacts[i].getAddress() << std::endl;
+    }
+
+    std::cout << contacts.size() << " contacts saved to file.\n";
+
+    // Close files
+    writeNames.close();
+    writeAddresses.close();
+    writeNumbers.close();
+    writeEmails.close();
+}
+
+void readFromFile(std::vector<Contact> &contacts) {
+    // Open files to read from
+    std::ifstream readNames, readAddresses, readNumbers, readEmails;
+
+    readNames.open("namesData.txt");
+    readAddresses.open("addressData.txt");
+    readNumbers.open("numbersData.txt");
+    readEmails.open("emailsData.txt");
+
+    // Sync from file
+    int contactsReadCount = 0;
+    std::string tempName, tempNum, tempEmail, tempAddress;
+
+    while ((std::getline(readNames, tempName)) && (readNumbers >> tempNum) && (std::getline(readEmails, tempEmail)) && (std::getline(readAddresses, tempAddress))) {
+        Contact tempContact;
+        tempContact.setName(tempName);
+        tempContact.setPhoneNum(tempNum);
+        tempContact.setEmail(tempEmail);
+        tempContact.setAddress(tempAddress);
+        contacts.push_back(tempContact);
+        ++contactsReadCount;
+    }
+
+    if (contactsReadCount == 0) {
+        std::cerr << "Error: No Contacts Read From File\n";
+        return;
+    }
+
+    std::cout << "Read " << contactsReadCount << " contacts from file.\n";
+
+    // Close files
+    readNames.close();
+    readAddresses.close();
+    readNumbers.close();
+    readEmails.close();
+}
+
+/* todo
+ * improve menu item display format (basically add a bunch of '=')
+ * fix error with out-of-range values for 'edit contact' and 'delete contact'
+ * improve error message formatting (maybe unnecessary newlines at beginning of messages)
+ * */
