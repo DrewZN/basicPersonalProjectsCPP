@@ -9,3 +9,4 @@ Just some basic personal projects written in C++
 |**studentRecordSystem**|Menu-driven student record system. Allows for creation, deletion, and modification of individual student records.|
 |**basicFlashcardSystem**|Menu-driven flashcard system. Allows for creation, editing, deletion, and limited practice of flashcards.|
 |**basicVendingMachine**|WIP - Command-driven vending machine system.|
+|**basicHangman**|WIP - Hangman. Displays correct letters. Needs to be fixed so that each limb is accounted for as well. Not just each 'row'.|

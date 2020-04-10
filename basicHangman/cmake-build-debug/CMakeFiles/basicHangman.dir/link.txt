@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/basicHangman.dir/main.cpp.o  -o basicHangman 
