@@ -2,10 +2,12 @@
 #include <string>
 #include <vector>
 
-void displayHangman(std::vector<std::string>);
-bool checkForLetter(char, std::string, std::vector<char>&, std::vector<char>&);
-void updateHangman(std::vector<std::string> &, std::vector<std::string>, int);
-void createLetterLines(std::vector<char> &, std::string);
+// Fraction Prototypes
+void displayHangman(std::vector<std::string>);                                  // Displays current state of hangman board
+bool checkForLetter(char, std::string, std::vector<char>&, std::vector<char>&); // Checks if letter exists in answer word
+void updateHangman(std::vector<std::string> &, std::vector<std::string>, int);  // Updates hangman board with limbs as you get more letters wrong
+void createLetterLines(std::vector<char> &, std::string);                       // Creates letter lines (-) for each character in the answer
+bool checkIfGameCompleted(std::string, std::vector<char>);                      // Checks if letters in the lettersOfAns vector match the answer
 
 int main() {
     // Important Variables
@@ -14,23 +16,25 @@ int main() {
     std::vector<char> correctLetters;
     std::vector<char> lettersOfAns;
     int numErrors = 0;
-    std::string ans = "humility";
+    std::string ans = "book";
     int maxErrors = 5;
-
+    int numTries = 0;
+    createLetterLines(lettersOfAns, ans);
+    // Infinite Loop Until Win or Lose
     while (true) {
+        // Display Current State of Hangman Board
         displayHangman(gameBoard);
-        createLetterLines(lettersOfAns, ans);
         std::cout << std::endl;
-
+        // Display Current Letter Lines
         for (int i = 0; i < ans.length(); i++) {
             std::cout << lettersOfAns[i] << " ";
         }
         std::cout << std::endl;
-
+        // Ask For Guess
         char guess;
         std::cout << "\nGuess a letter: ";
         std::cin >> guess;
-
+        // Check If Guessed Character Matches Any Letter in the Answer
         if (checkForLetter(guess, ans, correctLetters, lettersOfAns)) {
             displayHangman(gameBoard);
             std::cout << "\nLetters found: ";
@@ -44,10 +48,18 @@ int main() {
             if (numErrors == maxErrors) {
                 updateHangman(gameBoard, templateBoard, numErrors);
                 displayHangman(gameBoard);
-                std::cerr << "Game Over!\n";
+                std::cerr << "Game Over! You Lose!\n";
                 break;
             }
             updateHangman(gameBoard, templateBoard, numErrors);
+        }
+        // Every Guess Increases Number of Tries
+        numTries++;
+        // If Letters Guessed Matches the Answer
+        if (checkIfGameCompleted(ans, lettersOfAns)) {
+            std::cout << "Game Over! You Win!\n"
+                         "It Took You" << numTries << " Tries!\n";
+            break;
         }
     }
     return 0;
@@ -78,7 +90,19 @@ void updateHangman(std::vector<std::string> &gameBoard, std::vector<std::string>
 }
 
 void createLetterLines(std::vector<char> &lettersOfAns, std::string ans) {
-    for (int i = 1; i < ans.length(); i++) {
+    for (int i = 0; i < ans.length(); i++) {
         lettersOfAns.push_back('-');
     }
+}
+
+bool checkIfGameCompleted(std::string ans, std::vector<char> lettersOfAns) {
+    bool ret = true;
+
+    for (int i = 0; i < lettersOfAns.size(); i++) {
+        if (ans[i] != lettersOfAns[i]) {
+            return false;
+        }
+    }
+
+    return true;
 }
