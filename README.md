@@ -8,3 +8,4 @@ Just some basic personal projects written in C++
 |**contactSystem**|Menu-driven contact management system that allows for the creation and deletion of phone contacts. Allows for searching for as well as editing individual contacts. Needs some bug-fixing (check todo).|
 |**studentRecordSystem**|Menu-driven student record system. Allows for creation, deletion, and modification of individual student records.|
 |**basicFlashcardSystem**|Menu-driven flashcard system. Allows for creation, editing, deletion, and limited practice of flashcards.|
+|**basicVendingMachine**|WIP - Command-driven vending machine system.|

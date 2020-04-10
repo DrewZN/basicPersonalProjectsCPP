@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/main.cpp">
+		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/studentRecordSystem.cpp">
 			<Option target="studentRecordSystem"/>
 		</Unit>
 		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/CMakeLists.txt">

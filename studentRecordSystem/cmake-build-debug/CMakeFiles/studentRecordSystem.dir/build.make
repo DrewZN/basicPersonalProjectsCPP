@@ -57,27 +57,27 @@ include CMakeFiles/studentRecordSystem.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/studentRecordSystem.dir/flags.make
 
-CMakeFiles/studentRecordSystem.dir/main.cpp.o: CMakeFiles/studentRecordSystem.dir/flags.make
-CMakeFiles/studentRecordSystem.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/studentRecordSystem.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/studentRecordSystem.dir/main.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/main.cpp
+CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o: CMakeFiles/studentRecordSystem.dir/flags.make
+CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o: ../studentRecordSystem.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o -c /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/studentRecordSystem.cpp
 
-CMakeFiles/studentRecordSystem.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/studentRecordSystem.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/main.cpp > CMakeFiles/studentRecordSystem.dir/main.cpp.i
+CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/studentRecordSystem.cpp > CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.i
 
-CMakeFiles/studentRecordSystem.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/studentRecordSystem.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/main.cpp -o CMakeFiles/studentRecordSystem.dir/main.cpp.s
+CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/studentRecordSystem.cpp -o CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.s
 
 # Object files for target studentRecordSystem
 studentRecordSystem_OBJECTS = \
-"CMakeFiles/studentRecordSystem.dir/main.cpp.o"
+"CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o"
 
 # External object files for target studentRecordSystem
 studentRecordSystem_EXTERNAL_OBJECTS =
 
-studentRecordSystem: CMakeFiles/studentRecordSystem.dir/main.cpp.o
+studentRecordSystem: CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o
 studentRecordSystem: CMakeFiles/studentRecordSystem.dir/build.make
 studentRecordSystem: CMakeFiles/studentRecordSystem.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/studentRecordSystem/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable studentRecordSystem"

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/studentRecordSystem.dir/main.cpp.o  -o studentRecordSystem 
+/usr/bin/c++  -g   CMakeFiles/studentRecordSystem.dir/studentRecordSystem.cpp.o  -o studentRecordSystem 
