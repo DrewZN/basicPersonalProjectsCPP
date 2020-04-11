@@ -14,6 +14,8 @@ bool checkIfGameCompleted(std::string, std::vector<char>);                      
 std::string generateWord();                                        // Randomly Selects a Word From the File
 
 int main() {
+    // Print Developer Info
+    std::cout << "Hangman: made by Dominic Andrew Bernardino\n";
     // Important Variables
     std::vector<std::string> templateBoard = {"--------|", "   |    |", "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
     std::vector<std::string> gameBoard = {"--------|", "        |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
