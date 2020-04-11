@@ -24,7 +24,7 @@ int main() {
     std::vector<char> incorrectLetters;
     int numErrors = 0;
     std::string ans = generateWord(); // Generate Random Word From File
-    int maxErrors = 7;
+    int maxErrors = 8;
     int numTries = 0;
     createLetterLines(lettersOfAns, ans);
     // Infinite Loop Until Win or Lose
@@ -84,9 +84,10 @@ int main() {
                 // Updates and Shows Full Hangman Board
                 updateHangman(gameBoard, numErrors);
                 displayHangman(gameBoard);
+                std::cout << std::endl;
                 // Game Over (Lose)
                 std::cerr << "Game Over! You Lose!\n";
-                std::cerr << "The Correct Word Was: " << ans <<  std::endl;
+                std::cerr << "The Correct Word Was: " << ans << std::endl;
                 break;
             }
             // Updates Hangman Board From Incorrect Guess
@@ -140,31 +141,35 @@ void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
     // Updates Each Row (From Top to Bottom) Depending On Number of Errors
     switch (numErrors) {
         case 1: {
-            gameBoard = {"--------|", "   |    |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "        |", "        |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 2: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "        |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "        |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 3: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "   |    |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "   |    |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 4: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|    |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|    |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 5: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 6: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /     |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "        |", "        |", "--------|" };
             break;
         }
         case 7: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  / \\   |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /     |", "        |", "--------|" };
+            break;
+        }
+        case 8: {
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  / \\   |", "        |", "--------|" };
             break;
         }
     }
