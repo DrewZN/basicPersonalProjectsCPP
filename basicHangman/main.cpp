@@ -1,13 +1,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
 
 // Function Prototypes
 void displayHangman(std::vector<std::string>);                                  // Displays current state of hangman board
 bool checkForLetter(char, std::string, std::vector<char>&, std::vector<char>&); // Checks if letter exists in answer word
-void updateHangman(std::vector<std::string> &, std::vector<std::string>, int);  // Updates hangman board with limbs as you get more letters wrong
+void updateHangman(std::vector<std::string> &, int);  // Updates hangman board with limbs as you get more letters wrong
 void createLetterLines(std::vector<char> &, std::string);                       // Creates letter lines (-) for each character in the answer
 bool checkIfGameCompleted(std::string, std::vector<char>);                      // Checks if letters in the lettersOfAns vector match the answer
+std::string generateWord(std::string &);                                        // Randomly Selects a Word From the File
 
 int main() {
     // Important Variables
@@ -16,7 +20,7 @@ int main() {
     std::vector<char> correctLetters;
     std::vector<char> lettersOfAns;
     int numErrors = 0;
-    std::string ans = "book";
+    std::string ans = generateWord(ans); // Generate Random Word From File
     int maxErrors = 7;
     int numTries = 0;
     createLetterLines(lettersOfAns, ans);
@@ -46,14 +50,15 @@ int main() {
             // Checks if Number of Errors Is Equivalent to Maximum Number of Incorrect Guesses
             if (numErrors == maxErrors) {
                 // Updates and Shows Full Hangman Board
-                updateHangman(gameBoard, templateBoard, numErrors);
+                updateHangman(gameBoard, numErrors);
                 displayHangman(gameBoard);
                 // Game Over (Lose)
                 std::cerr << "Game Over! You Lose!\n";
+                std::cerr << "The Correct Word Was: " << ans <<  std::endl;
                 break;
             }
             // Updates Hangman Board From Incorrect Guess
-            updateHangman(gameBoard, templateBoard, numErrors);
+            updateHangman(gameBoard, numErrors);
         }
         // Every Guess Increases Number of Tries
         numTries++;
@@ -91,7 +96,7 @@ bool checkForLetter(char guess, std::string ans, std::vector<char> &correctLette
     return found;
 }
 
-void updateHangman(std::vector<std::string> &gameBoard, std::vector<std::string> templateBoard, int numErrors) {
+void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
     // Updates Each Row (From Top to Bottom) Depending On Number of Errors
     switch (numErrors) {
         case 1: {
@@ -141,4 +146,20 @@ bool checkIfGameCompleted(std::string ans, std::vector<char> lettersOfAns) {
         }
     }
     return true;
+}
+
+std::string generateWord(std::string &ans) {
+    // Open a Word Dictionary File
+    std::ifstream readFile("wordDictionary.txt");
+    // Create Temporary String Vector to Store Words From File
+    std::vector<std::string> tempWords;
+    std::string temp;
+    // Read To Temporary String Variable, Then Push To Temp String Vector
+    while (readFile >> temp) {
+        tempWords.push_back(temp);
+    }
+    // Initialize Random Seed
+    std::srand(std::time(nullptr));
+    // Generate Random Answer Word Based on Secret Number From 1 to the Number Of Entries In Word Dictionary
+    ans = tempWords[std::rand() % tempWords.size()];
 }
