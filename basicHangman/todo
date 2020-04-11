@@ -1,6 +1,1 @@
-1.) Fix the program so that all limbs represent their own respective incorrect guesses
-    - If so, change the amount of max guesses to account for the new allowed guesses
-        + Also change the "update" functions to reflect this
-
-2.) Add word randomizer that reads from a file
-    - Create a read from file function and create some sort of randomizer
+1.) Add a list of letters you already guessed

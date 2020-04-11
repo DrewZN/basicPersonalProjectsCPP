@@ -40,8 +40,7 @@ int main() {
         std::cin >> guess;
         // Check If Guessed Character Matches Any Letter in the Answer
         if (checkForLetter(guess, ans, correctLetters, lettersOfAns)) {
-            // Displays Current Board State
-            displayHangman(gameBoard);
+            // If Letters Guessed Matches the Answer
             std::cout << std::endl;
         }
         else {
@@ -62,10 +61,17 @@ int main() {
         }
         // Every Guess Increases Number of Tries
         numTries++;
-        // If Letters Guessed Matches the Answer
+        // If You Guess All The Correct Characters
         if (checkIfGameCompleted(ans, lettersOfAns)) {
+            // Displays Current Board State
+            displayHangman(gameBoard);
+            // Displays Correct Letters
+            std::cout << std::endl;
+            for (int i = 0; i < ans.length(); i++) {
+                std::cout << lettersOfAns[i] << " ";
+            }
             // Game Over (Win)
-            std::cout << "Game Over! You Win!\n"
+            std::cout << "\n\nGame Over! You Win!\n"
                          "It Took You " << numTries << " Tries!\n";
             break;
         }
@@ -124,7 +130,7 @@ void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
             break;
         }
         case 7: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /\\    |", "        |", "--------|"};
             break;
         }
     }
