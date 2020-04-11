@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/basicHangman.dir/main.cpp.o"
-  "basicHangman"
+  "CMakeFiles/basicHangman.dir/main.cpp.obj"
+  "basicHangman.exe"
+  "basicHangman.exe.manifest"
+  "basicHangman.lib"
   "basicHangman.pdb"
 )
 

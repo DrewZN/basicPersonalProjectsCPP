@@ -11,7 +11,7 @@ bool checkForLetter(char, std::string, std::vector<char>&, std::vector<char>&); 
 void updateHangman(std::vector<std::string> &, int);  // Updates hangman board with limbs as you get more letters wrong
 void createLetterLines(std::vector<char> &, std::string);                       // Creates letter lines (-) for each character in the answer
 bool checkIfGameCompleted(std::string, std::vector<char>);                      // Checks if letters in the lettersOfAns vector match the answer
-std::string generateWord(std::string &);                                        // Randomly Selects a Word From the File
+std::string generateWord();                                        // Randomly Selects a Word From the File
 
 int main() {
     // Important Variables
@@ -21,7 +21,7 @@ int main() {
     std::vector<char> lettersOfAns;
     std::vector<char> incorrectLetters;
     int numErrors = 0;
-    std::string ans = generateWord(ans); // Generate Random Word From File
+    std::string ans = generateWord(); // Generate Random Word From File
     int maxErrors = 7;
     int numTries = 0;
     createLetterLines(lettersOfAns, ans);
@@ -186,7 +186,7 @@ bool checkIfGameCompleted(std::string ans, std::vector<char> lettersOfAns) {
     return true;
 }
 
-std::string generateWord(std::string &ans) {
+std::string generateWord() {
     // Open a Word Dictionary File
     std::ifstream readFile("wordDictionary.txt");
     // Create Temporary String Vector to Store Words From File
@@ -199,5 +199,6 @@ std::string generateWord(std::string &ans) {
     // Initialize Random Seed
     std::srand(std::time(nullptr));
     // Generate Random Answer Word Based on Secret Number From 1 to the Number Of Entries In Word Dictionary
-    ans = tempWords[std::rand() % tempWords.size()];
+    std::string ansG = tempWords[std::rand() % tempWords.size()];
+    return ansG;
 }
