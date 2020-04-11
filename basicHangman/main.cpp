@@ -19,6 +19,7 @@ int main() {
     std::vector<std::string> gameBoard = {"--------|", "        |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
     std::vector<char> correctLetters;
     std::vector<char> lettersOfAns;
+    std::vector<char> incorrectLetters;
     int numErrors = 0;
     std::string ans = generateWord(ans); // Generate Random Word From File
     int maxErrors = 7;
@@ -34,6 +35,25 @@ int main() {
             std::cout << lettersOfAns[i] << " ";
         }
         std::cout << std::endl;
+        // Show Incorrectly Guessed Letters
+        if (incorrectLetters.size() > 0) {
+            // Sort Alphabetically
+            for (int i = 0; i < incorrectLetters.size(); i++) {
+                for (int j = i + 1; j < incorrectLetters.size(); j++) {
+                    if (incorrectLetters[j] < incorrectLetters[i]) {
+                        char tempC = incorrectLetters[j];
+                        incorrectLetters[j] = incorrectLetters[i];
+                        incorrectLetters[i] = tempC;
+                    }
+                }
+            }
+            // Now Display Incorrectly Guessed Letters
+            std::cout << "\nIncorrect Letters Already Guessed: ";
+            for (int i = 0; i < incorrectLetters.size(); i++) {
+                std::cout << incorrectLetters[i] << " ";
+            }
+            std::cout << std::endl;
+        }
         // Ask For Guess
         char guess;
         std::cout << "\nGuess a letter: ";
@@ -46,6 +66,17 @@ int main() {
         else {
             // Increases Number of Errors
             numErrors++;
+            // Check if Guessed Letter Is Already In "incorrectLetters" Vector
+            bool notInVector = true;
+            for (int i = 0; i < incorrectLetters.size(); i++) {
+                if (guess == incorrectLetters[i]) {
+                    notInVector = false;
+                }
+            }
+            // Add Incorrect Guess to "incorrectLetters" Vector
+            if (notInVector) {
+                incorrectLetters.push_back(guess);
+            }
             // Checks if Number of Errors Is Equivalent to Maximum Number of Incorrect Guesses
             if (numErrors == maxErrors) {
                 // Updates and Shows Full Hangman Board
@@ -58,6 +89,7 @@ int main() {
             }
             // Updates Hangman Board From Incorrect Guess
             updateHangman(gameBoard, numErrors);
+            std::cout << std::endl;
         }
         // Every Guess Increases Number of Tries
         numTries++;
@@ -130,7 +162,7 @@ void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
             break;
         }
         case 7: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /\\    |", "        |", "--------|"};
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  / \\   |", "        |", "--------|"};
             break;
         }
     }
@@ -139,7 +171,7 @@ void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
 void createLetterLines(std::vector<char> &lettersOfAns, std::string ans) {
     // Creates Number of Letters to Guess and Display to Screen
     for (int i = 0; i < ans.length(); i++) {
-        lettersOfAns.push_back('-');
+        lettersOfAns.push_back('_');
     }
 }
 
