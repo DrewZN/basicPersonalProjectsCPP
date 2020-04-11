@@ -12,12 +12,12 @@ bool checkIfGameCompleted(std::string, std::vector<char>);                      
 int main() {
     // Important Variables
     std::vector<std::string> templateBoard = {"--------|", "   |    |", "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
-    std::vector<std::string> gameBoard = {"--------|", "        |", "        |", "        |", "        |", "        |", "        |", "--------|"};
+    std::vector<std::string> gameBoard = {"--------|", "        |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
     std::vector<char> correctLetters;
     std::vector<char> lettersOfAns;
     int numErrors = 0;
     std::string ans = "book";
-    int maxErrors = 5;
+    int maxErrors = 7;
     int numTries = 0;
     createLetterLines(lettersOfAns, ans);
     // Infinite Loop Until Win or Lose
@@ -38,11 +38,6 @@ int main() {
         if (checkForLetter(guess, ans, correctLetters, lettersOfAns)) {
             // Displays Current Board State
             displayHangman(gameBoard);
-            // Displays Correct Guessed Letters
-            std::cout << "\nLetters found: ";
-            for (int i = 0; i < correctLetters.size(); i++) {
-                std::cout << correctLetters[i] << " ";
-            }
             std::cout << std::endl;
         }
         else {
@@ -66,7 +61,7 @@ int main() {
         if (checkIfGameCompleted(ans, lettersOfAns)) {
             // Game Over (Win)
             std::cout << "Game Over! You Win!\n"
-                         "It Took You" << numTries << " Tries!\n";
+                         "It Took You " << numTries << " Tries!\n";
             break;
         }
     }
@@ -98,8 +93,35 @@ bool checkForLetter(char guess, std::string ans, std::vector<char> &correctLette
 
 void updateHangman(std::vector<std::string> &gameBoard, std::vector<std::string> templateBoard, int numErrors) {
     // Updates Each Row (From Top to Bottom) Depending On Number of Errors
-    for (int i = 1; i < numErrors + 1; i++) {
-        gameBoard[i] = templateBoard[i];
+    switch (numErrors) {
+        case 1: {
+            gameBoard = {"--------|", "   |    |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
+            break;
+        }
+        case 2: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "        |", "        |", "        |", "        |", "--------|"};
+            break;
+        }
+        case 3: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "   |    |", "        |", "        |", "        |", "--------|"};
+            break;
+        }
+        case 4: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|    |", "        |", "        |", "        |", "--------|"};
+            break;
+        }
+        case 5: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "        |", "        |", "        |", "--------|"};
+            break;
+        }
+        case 6: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /     |", "        |", "--------|"};
+            break;
+        }
+        case 7: {
+            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
+            break;
+        }
     }
 }
 
