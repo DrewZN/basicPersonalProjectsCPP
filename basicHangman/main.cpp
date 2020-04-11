@@ -15,7 +15,7 @@ std::string generateWord();                                        // Randomly S
 
 int main() {
     // Print Developer Info
-    std::cout << "Hangman: made by Dominic Andrew Bernardino\n";
+    std::cout << "Hangman: Made by Dominic Andrew Bernardino\n\n";
     // Important Variables
     std::vector<std::string> templateBoard = {"--------|", "   |    |", "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
     std::vector<std::string> gameBoard = {"--------|", "        |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
