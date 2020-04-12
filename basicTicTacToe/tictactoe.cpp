@@ -23,16 +23,25 @@ int main() {
     	displayBoard(emptyBoard);
     	std::cout << "Player 1 (x): ";
     	std::cin >> player1;
+    	// Error check if number was not inputted
+    	while (std::cin.fail()) {
+    		std::cerr << "\nError: Invalid Input\n";
+    		std::cin.clear();
+    		std::cin.ignore(256, '\n');
+    		displayBoard(emptyBoard);
+    		std::cout << "Player 1 (x): ";
+    		std::cin >> player1;
+    	}
     	// Check if number is [1,9]
     	while (!(player1 >= 1 && player1 <= 9)) {
-    		std::cerr << "\nError: Invalid Option:\n";
+    		std::cerr << "\nError: Invalid Option\n";
     		displayBoard(emptyBoard);
     		std::cout << "Player 1 (x): ";
     		std::cin >> player1;
     	}
     	// Check if Number Already Guessed
     	while (checkIfAlreadyUsed(emptyBoard, player1)) {
-    		std::cerr << "\nError: Invalid Option:\n";
+    		std::cerr << "\nError: Invalid Option\n";
     		displayBoard(emptyBoard);
     		std::cout << "Player 1 (x): ";
     		std::cin >> player1;
@@ -47,9 +56,18 @@ int main() {
     	displayBoard(emptyBoard);
     	std::cout << "Player 2 (o): ";
     	std::cin >> player2;
+    	// Error check if number was not inputted
+    	while (std::cin.fail()) {
+    		std::cerr << "\nError: Invalid Input\n";
+    		std::cin.clear();
+    		std::cin.ignore(256, '\n');
+    		displayBoard(emptyBoard);
+    		std::cout << "Player 2 (o): ";
+    		std::cin >> player1;
+    	}
     	// Check if number is [1,9]
     	while (!(player2 >= 1 && player2 <= 9)) {
-    		std::cerr << "\nInvalid Option\n";
+    		std::cerr << "\nError: Invalid Option\n";
     		displayBoard(emptyBoard);
     		std::cout << "Player 2 (o): ";
     		std::cin >> player2;
@@ -57,7 +75,7 @@ int main() {
     	}
     	// Check if Number Already Guessed
     	while (checkIfAlreadyUsed(emptyBoard, player2)) {
-    		std::cerr << "\nInvalid Option\n";
+    		std::cerr << "\nError: Invalid Option\n";
     		displayBoard(emptyBoard);
     		std::cout << "Player 2 (o): ";
     		std::cin >> player2;
