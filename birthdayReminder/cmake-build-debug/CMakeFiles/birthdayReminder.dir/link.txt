@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/birthdayReminder.dir/main.cpp.o -o birthdayReminder 
