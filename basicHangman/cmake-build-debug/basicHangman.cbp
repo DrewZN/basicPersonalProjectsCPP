@@ -4,88 +4,88 @@
 	<Project>
 		<Option title="basicHangman"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="msvc8"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="basicHangman">
-				<Option output="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/basicHangman" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
+				<Option output="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/basicHangman.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 basicHangman"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 basicHangman"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="basicHangman/fast">
-				<Option output="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/basicHangman" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
+				<Option output="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/basicHangman.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
-					<Add directory="/usr/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 basicHangman/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 basicHangman/fast"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Dominic Bernardino\Downloads\Programming\Projects\C++\Personal\basicPersonalProjectsCPP\basicHangman\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/main.cpp">
+		<Unit filename="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/main.cpp">
 			<Option target="basicHangman"/>
 		</Unit>
-		<Unit filename="/home/drewzn/Stuff/Programming/C++/Projects/Personal/basicPersonalProjectsCPP/basicHangman/CMakeLists.txt">
+		<Unit filename="C:/Users/Dominic Bernardino/Downloads/Programming/Projects/C++/Personal/basicPersonalProjectsCPP/basicHangman/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -11,9 +11,11 @@ bool checkForLetter(char, std::string, std::vector<char>&, std::vector<char>&); 
 void updateHangman(std::vector<std::string> &, int);  // Updates hangman board with limbs as you get more letters wrong
 void createLetterLines(std::vector<char> &, std::string);                       // Creates letter lines (-) for each character in the answer
 bool checkIfGameCompleted(std::string, std::vector<char>);                      // Checks if letters in the lettersOfAns vector match the answer
-std::string generateWord(std::string &);                                        // Randomly Selects a Word From the File
+std::string generateWord();                                        // Randomly Selects a Word From the File
 
 int main() {
+    // Print Developer Info
+    std::cout << "Hangman: Made by Dominic Andrew Bernardino\n\n";
     // Important Variables
     std::vector<std::string> templateBoard = {"--------|", "   |    |", "   o    |", "  /|\\   |", "   |    |", "   /\\   |", "        |", "--------|"};
     std::vector<std::string> gameBoard = {"--------|", "        |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
@@ -21,8 +23,8 @@ int main() {
     std::vector<char> lettersOfAns;
     std::vector<char> incorrectLetters;
     int numErrors = 0;
-    std::string ans = generateWord(ans); // Generate Random Word From File
-    int maxErrors = 7;
+    std::string ans = generateWord(); // Generate Random Word From File
+    int maxErrors = 8;
     int numTries = 0;
     createLetterLines(lettersOfAns, ans);
     // Infinite Loop Until Win or Lose
@@ -82,9 +84,10 @@ int main() {
                 // Updates and Shows Full Hangman Board
                 updateHangman(gameBoard, numErrors);
                 displayHangman(gameBoard);
+                std::cout << std::endl;
                 // Game Over (Lose)
                 std::cerr << "Game Over! You Lose!\n";
-                std::cerr << "The Correct Word Was: " << ans <<  std::endl;
+                std::cerr << "The Correct Word Was: " << ans << std::endl;
                 break;
             }
             // Updates Hangman Board From Incorrect Guess
@@ -138,31 +141,35 @@ void updateHangman(std::vector<std::string> &gameBoard, int numErrors) {
     // Updates Each Row (From Top to Bottom) Depending On Number of Errors
     switch (numErrors) {
         case 1: {
-            gameBoard = {"--------|", "   |    |",  "        |", "        |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "        |", "        |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 2: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "        |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "        |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 3: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "   |    |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "   |    |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 4: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|    |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|    |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 5: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "        |", "        |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "        |", "        |", "        |", "--------|" };
             break;
         }
         case 6: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /     |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "        |", "        |", "--------|" };
             break;
         }
         case 7: {
-            gameBoard = {"--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  / \\   |", "        |", "--------|"};
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  /     |", "        |", "--------|" };
+            break;
+        }
+        case 8: {
+            gameBoard = { "--------|", "   |    |",  "   o    |", "  /|\\   |", "   |    |", "  / \\   |", "        |", "--------|" };
             break;
         }
     }
@@ -186,7 +193,7 @@ bool checkIfGameCompleted(std::string ans, std::vector<char> lettersOfAns) {
     return true;
 }
 
-std::string generateWord(std::string &ans) {
+std::string generateWord() {
     // Open a Word Dictionary File
     std::ifstream readFile("wordDictionary.txt");
     // Create Temporary String Vector to Store Words From File
@@ -199,5 +206,6 @@ std::string generateWord(std::string &ans) {
     // Initialize Random Seed
     std::srand(std::time(nullptr));
     // Generate Random Answer Word Based on Secret Number From 1 to the Number Of Entries In Word Dictionary
-    ans = tempWords[std::rand() % tempWords.size()];
+    std::string ansG = tempWords[std::rand() % tempWords.size()];
+    return ansG;
 }
